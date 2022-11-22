@@ -16,7 +16,7 @@ public class AppConfig {
 		order.setId(100);
 		order.setStatus("Confirmed");
 		order.setOrderAmount(120);
-		order.setOrderBy("pratap");
+		order.setOrderBy("rakesh");
 		order.setItems(Arrays.asList(samosa()));
 		return order;
 	}
