@@ -11,7 +11,7 @@ public class AppConfig {
 
 	
 	@Bean
-	public  Order order() {
+	public @Autowired Order order() {
 		Order order = new Order();
 		order.setId(100);
 		order.setStatus("Confirmed");
