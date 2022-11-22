@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-init-method="init" default-destroy-method="destroy" xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="order1" class="com.labs.spring.core.Order">   
+    
+    	<!-- <constructor-arg name="engine" ref="vtix" /> -->
+        <property name="id" value="100" />
+        <property name="status" value="confirmed" />
+        <property name="orderBy" value="rakesh" />
+        <property name="orderAmount" value="2000"/>	
+        <property name="items">	
+        <list>
+        <ref bean="item1" />
+        </list>
+        </property>
+        
+    </bean>
+    
+    <bean id="item1" class="com.labs.spring.core.Item" >   
+    
+    	<!-- <constructor-arg name="engine" ref="vtix" /> -->
+        <property name="id" value="120" />
+        <property name="price" value="223" />
+        <property name="quantity" value="200" />
+        <property name="cusine" value="light"/>	
+        <property name="veg" value="false"/>
+        <property name="itemName" value="veg biryani"/>		
+        
+        
+    </bean>
+
+</beans>
